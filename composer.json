@@ -1,0 +1,25 @@
+{
+  "name": "rs/security",
+  "description": "Security",
+  "type": "oxideshop-module",
+  "minimum-stability": "stable",
+  "keywords": ["oxid", "modules", "eShop"],
+  "homepage": "https://www.reisacher-software.de",
+  "license": [
+    "GPL-3.0-only",
+    "proprietary"
+  ],
+  "extra": {
+    "oxideshop": {
+      "target-directory": "rs/security"
+    }
+  },
+  "require": {
+    "php": ">=5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "rs\\security\\": "../../../source/modules/rs/security"
+    }
+  }
+}
