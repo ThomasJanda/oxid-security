@@ -30,7 +30,7 @@ $aModule = array(
             'group' => 'rs-security_main',
             'name'  => 'rs-security_Content-Security-Policy',
             'type'  => 'str',
-            'value' => "default-src 'self' https: ; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.googleapis.com  https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.paypalobjects.com https://www.google-analytics.com; img-src 'self' data: https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; frame-ancestors 'self'; form-action 'self'; base-uri 'self';",
+            'value' => "default-src 'self' https: ; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.googleapis.com  https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.paypal.com/paymentwall/payment-selection https://www.paypalobjects.com https://www.google-analytics.com; img-src 'self' data: https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net; frame-ancestors 'self'; form-action 'self' https://www.paypal.com/paymentwall/payment-selection; base-uri 'self';",
         ),
         array(
             'group' => 'rs-security_main',
