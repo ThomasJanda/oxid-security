@@ -54,7 +54,7 @@ $aLang = array(
 
     'SHOP_MODULE_GROUP_rs-security_cookie_SameSite' => 'Cookie SameSite',
     'SHOP_MODULE_rs-security_cookie_SameSite_enabled' => 'Enabled? (Only use if shop is in SSL mode!)',
-    'SHOP_MODULE_rs-security_cookie_SameSite' => 'Default: Strict, Other options: None, Lax',
+    'SHOP_MODULE_rs-security_cookie_SameSite' => 'Default: Lax, Other options: None, Lax, Strict',
 
     /*
     'SHOP_MODULE_GROUP_rs-security_cookie_prefix' => 'Cookie prefix',

@@ -8,15 +8,15 @@ class UtilsServer extends UtilsServer_parent
     protected function _rs_security__getCookieSameSite()
     {
         $oConfig = $this->getConfig();
-        if(!$this->_rs_security__isSecure()) return "";
-        
+        if (!$this->_rs_security__isSecure()) return "";
+
         $sSameSite = "";
         if ((bool) $oConfig->getConfigParam('rs-security_cookie_SameSite_enabled',
                 false)) {
             $sSameSite = $oConfig->getConfigParam('rs-security_cookie_SameSite',
                 '');
         }
-        
+
         return $sSameSite;
     }
 
@@ -25,8 +25,7 @@ class UtilsServer extends UtilsServer_parent
         $config = $this->getConfig();
         return ($config->isSsl() && $config->getSslShopUrl() == $config->getShopUrl());
     }
-    
-    
+
     /**
      * sets cookie
      *
@@ -46,15 +45,12 @@ class UtilsServer extends UtilsServer_parent
                                 $blToSession = true, $blSecure = false,
                                 $blHttpOnly = true)
     {
-        
+
         $sSameSite = $this->_rs_security__getCookieSameSite();
 
-        if($sSameSite=="")
-        {
-            return parent::setOxCookie ($sName, $sValue, $iExpire,
-            $sPath, $sDomain,
-            $blToSession, $blSecure,
-            $blHttpOnly);
+        if ($sSameSite == "") {
+            return parent::setOxCookie($sName, $sValue, $iExpire, $sPath,
+                    $sDomain, $blToSession, $blSecure, $blHttpOnly);
         }
 
         if ($blToSession && !$this->isAdmin()) {
@@ -62,7 +58,6 @@ class UtilsServer extends UtilsServer_parent
                 $sDomain);
         }
 
-        $config   = $this->getConfig();
         //if shop runs in https only mode we can set secure flag to all cookies
         $blSecure = $blSecure || $this->_rs_security__isSecure();
 
@@ -72,38 +67,30 @@ class UtilsServer extends UtilsServer_parent
             //PHP < 7.3.0
 
             $inject = "";
-            if($sSameSite!="")
-            {
+            if ($sSameSite != "") {
                 $inject = "; SameSite=".$sSameSite;
             }
 
             $ret = setcookie(
-                $sName, 
-                $sValue, 
-                $iExpire, 
+                $sName, $sValue, $iExpire,
                 $this->_getCookiePath($sPath).$inject,
-                $this->_getCookieDomain($sDomain), 
-                $blSecure, 
-                $blHttpOnly
+                $this->_getCookieDomain($sDomain), $blSecure, $blHttpOnly
             );
-        }
-        else
-        {
+        } else {
             //PHP >= 7.3.0
 
-            $aParam=[
+            $aParam = [
                 'expires' => $iExpire,
                 'path' => $this->_getCookiePath($sPath),
                 'domain' => $this->_getCookieDomain($sDomain),
                 'secure' => $blSecure,
                 'httponly' => $blHttpOnly
             ];
-            
-            if($sSameSite!="")
-            {
+
+            if ($sSameSite != "") {
                 $aParam['samesite'] = $sSameSite;
             }
-            
+
             $ret = setcookie($sName, $sValue, $aParam);
         }
 

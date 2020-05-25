@@ -233,7 +233,7 @@ $aModule = array(
             'group' => 'rs-security_cookie_SameSite',
             'name' => 'rs-security_cookie_SameSite',
             'type' => 'str',
-            'value' => 'Strict',
+            'value' => 'Lax',
         ),
 
         /* ----- */
