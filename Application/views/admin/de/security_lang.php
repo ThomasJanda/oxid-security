@@ -7,11 +7,12 @@ $aLang = array(
     'SHOP_MODULE_GROUP_rs-security_main' => 'Standard headers',
 
     'SHOP_MODULE_GROUP_rs-security_Strict-Transport-Security' => 'Header Strict-Transport-Security',
-    'SHOP_MODULE_rs-security_Strict-Transport-Security_enable' => 'Enabled?',
+    'SHOP_MODULE_rs-security_Strict-Transport-Security_enabled' => 'Enabled?',
     'SHOP_MODULE_rs-security_Strict-Transport-Security' => 'Default: max-age=63072000; includeSubDomains; preload',
 
+    'SHOP_MODULE_rs-security_Content-Security-Policy_enabled' => 'test',
     'SHOP_MODULE_GROUP_rs-security_Content-Security-Policy' => 'Header Content-Security-Policy',
-    'SHOP_MODULE_rs-security_Content-Security-Policy_enable' => 'Enabled?',
+    'SHOP_MODULE_rs-security_Content-Security-Policy_enabled' => 'Enabled?',
     'SHOP_MODULE_rs-security_Content-Security-Policy_01' => "Part 1 (Default: default-src 'self' https:)",
     'SHOP_MODULE_rs-security_Content-Security-Policy_02' => "Part 2 (Default: object-src 'none')",
     'SHOP_MODULE_rs-security_Content-Security-Policy_03' => "Part 3 (Default: style-src 'self' 'unsafe-inline' https://fonts.googleapis.com)",

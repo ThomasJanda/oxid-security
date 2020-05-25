@@ -74,7 +74,7 @@ class UtilsServer extends UtilsServer_parent
             $inject = "";
             if($sSameSite!="")
             {
-                $inject = "; SameSite: ".$sSameSite;
+                $inject = "; SameSite=".$sSameSite;
             }
 
             $ret = setcookie(

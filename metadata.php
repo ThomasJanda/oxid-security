@@ -25,7 +25,7 @@ $aModule = array(
         /* ----- */
         array(
             'group' => 'rs-security_Strict-Transport-Security',
-            'name' => 'rs-security_Strict-Transport-Security_enable',
+            'name' => 'rs-security_Strict-Transport-Security_enabled',
             'type' => 'bool',
             'value' => true,
         ),
