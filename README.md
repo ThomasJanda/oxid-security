@@ -14,9 +14,9 @@ Documentation about the settings:
     
 ## Important settings
 
-#### SSL
+### SSL
 
-Your shop must be reachable via https all the time. All pages. To force the browser always use https 
+Your shop **must** be reachable via https all the time. All pages. To force the browser always use https 
 you maybe have to add some derectives to the ".htaccess". The settings can be different within other 
 hosting providers. Please contact them and ask how it work within there servers.
 
@@ -32,7 +32,7 @@ Example "domainfactory":
 
 You have to add the settings next to "RewriteBase /".
 
-#### Cookies
+### Cookies
 
 In the "config.inc.php" in the shop root, the urls has to set with "https"
 
@@ -41,7 +41,7 @@ In the "config.inc.php" in the shop root, the urls has to set with "https"
 
 Otherwiese the shop can´t set the cookie security correctly.
 
-#### Basic settings
+### Basic settings
 
 The basic setting shipped with this module should work but maybe you have to change them because of the 
 modules/scripts you use in your shop. Also you hosting provider maybe add some security header by default and
@@ -50,7 +50,7 @@ the settings are useless or will override by the hosting provider.
 If you don´t need one of the settings, remove all the text and leave it blank. With this, the module
 ignore the setting.
 
-#### Good to know
+### Good to know
 
 With only the basic settings you will not solve all issues but some. Issues are inline CSS 
 and inline JavaScript which used by the shop out of the box. To get 100% within the test pages above

@@ -29,24 +29,31 @@ class Output extends Output_parent
                 ];
                 foreach($aHeaders as $sHeader)
                 {
-                    $sValue = trim($oConfig->getConfigParam('rs-security_'.$sHeader,""));
-                    if($sValue!="")
-                        \OxidEsales\Eshop\Core\Registry::getUtils()->setHeader($sHeader.":".$sValue);
+                    if((bool) $oConfig->getConfigParam('rs-security_'.$sHeader."_enabled",false))
+                    {
+                        $sValue = trim($oConfig->getConfigParam('rs-security_'.$sHeader,""));
+                        if($sValue!="")
+                            \OxidEsales\Eshop\Core\Registry::getUtils()->setHeader($sHeader.":".$sValue);
+                    }
+
                 }
 
                 $sHeader = "Content-Security-Policy";
-                $aValues = [];
-                for($x=1;$x<15;$x++)
+                if ((bool) $oConfig->getConfigParam('rs-security_'.$sHeader."_enabled",false)) 
                 {
-                    $sValue = 'rs-security_'.$sHeader.'_'.str_pad($x,2,'0',STR_PAD_LEFT);
-                    $sValue = trim($oConfig->getConfigParam($sValue));
-                    if($sValue && $sValue!=="")
-                        $aValues[]=$sValue;
-                }
-                if(!empty($aValues))
-                {
-                    $sValue = implode(" ; ",$aValues)." ;";
-                    \OxidEsales\Eshop\Core\Registry::getUtils()->setHeader($sHeader.":".$sValue);
+                    $aValues = [];
+                    for($x=1;$x<15;$x++)
+                    {
+                        $sValue = 'rs-security_'.$sHeader.'_'.str_pad($x,2,'0',STR_PAD_LEFT);
+                        $sValue = trim($oConfig->getConfigParam($sValue));
+                        if($sValue && $sValue!=="")
+                            $aValues[]=$sValue;
+                    }
+                    if(!empty($aValues))
+                    {
+                        $sValue = implode(" ; ",$aValues)." ;";
+                        \OxidEsales\Eshop\Core\Registry::getUtils()->setHeader($sHeader.":".$sValue);
+                    }
                 }
 
                 //Additional
