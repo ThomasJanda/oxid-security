@@ -51,39 +51,98 @@ $aModule = array(
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_01_domains',
+            'type' => 'arr',
+            'value' => [],
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
             'name'  => 'rs-security_Content-Security-Policy_02',
             'type'  => 'str',
             'value' => "object-src 'none'",
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_02_domains',
+            'type' => 'arr',
+            'value' => [],
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
             'name'  => 'rs-security_Content-Security-Policy_03',
             'type'  => 'str',
-            'value' => "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+            'value' => "style-src 'self' 'unsafe-inline'",
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_03_domains',
+            'type' => 'arr',
+            'value' => [
+                'https://fonts.googleapis.com'
+            ],
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
             'name'  => 'rs-security_Content-Security-Policy_04',
             'type'  => 'str',
-            'value' => "font-src 'self' data: https://fonts.googleapis.com  https://fonts.gstatic.com",
+            'value' => "font-src 'self' data:",
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_04_domains',
+            'type' => 'arr',
+            'value' => [
+                'https://fonts.googleapis.com',
+                'https://fonts.gstatic.com'
+            ],
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
             'name'  => 'rs-security_Content-Security-Policy_05',
             'type'  => 'str',
-            'value' => "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.paypal.com/paymentwall/payment-selection https://www.paypalobjects.com https://www.google-analytics.com",
+            'value' => "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_05_domains',
+            'type' => 'arr',
+            'value' => [
+                 'https://www.paypal.com/paymentwall/payment-selection',
+                 'https://www.paypalobjects.com https://www.google-analytics.com'
+            ],
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
             'name'  => 'rs-security_Content-Security-Policy_06',
             'type'  => 'str',
-            'value' => "img-src 'self' data: https://www.google.com https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net",
+            'value' => "img-src 'self' data:",
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_06_domains',
+            'type' => 'arr',
+            'value' => [
+                'https://www.google.com',
+                'https://www.google-analytics.com',
+                'www.google-analytics.com',
+                'https://stats.g.doubleclick.net'
+            ],
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
             'name'  => 'rs-security_Content-Security-Policy_07',
             'type'  => 'str',
-            'value' => "connect-src 'self' https://www.google-analytics.com www.google-analytics.com https://stats.g.doubleclick.net",
+            'value' => "connect-src 'self'",
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_07_domains',
+            'type' => 'arr',
+            'value' => [
+                'https://www.google-analytics.com',
+                'www.google-analytics.com',
+                'https://stats.g.doubleclick.net'
+            ],
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
@@ -93,9 +152,23 @@ $aModule = array(
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_08_domains',
+            'type' => 'arr',
+            'value' => [],
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
             'name'  => 'rs-security_Content-Security-Policy_09',
             'type'  => 'str',
-            'value' => "form-action 'self' https://www.paypal.com/paymentwall/payment-selection",
+            'value' => "form-action 'self'",
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_09_domains',
+            'type' => 'arr',
+            'value' => [
+                'https://www.paypal.com/paymentwall/payment-selection'
+            ],
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
@@ -105,9 +178,21 @@ $aModule = array(
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_10_domains',
+            'type' => 'arr',
+            'value' => [],
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
             'name'  => 'rs-security_Content-Security-Policy_11',
             'type'  => 'str',
             'value' => "",
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_11_domains',
+            'type' => 'arr',
+            'value' => [],
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
@@ -117,9 +202,21 @@ $aModule = array(
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_12_domains',
+            'type' => 'arr',
+            'value' => [],
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
             'name'  => 'rs-security_Content-Security-Policy_13',
             'type'  => 'str',
             'value' => "",
+        ),
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_13_domains',
+            'type' => 'arr',
+            'value' => [],
         ),
         array(
             'group' => 'rs-security_Content-Security-Policy',
@@ -127,7 +224,12 @@ $aModule = array(
             'type'  => 'str',
             'value' => "",
         ),
-
+        array(
+            'group' => 'rs-security_Content-Security-Policy',
+            'name' => 'rs-security_Content-Security-Policy_14_domains',
+            'type' => 'arr',
+            'value' => [],
+        ),
         /* ----- */
         array(
             'group' => 'rs-security_X-Content-Type-Options',

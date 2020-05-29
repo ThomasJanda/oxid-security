@@ -8,7 +8,7 @@ class UtilsServer extends UtilsServer_parent
     protected function _rs_security__getCookieSameSite()
     {
         $oConfig = $this->getConfig();
-        if (!$this->_rs_security__isSecure()) return "";
+        //if (!$this->_rs_security__isSecure()) return "";
 
         $sSameSite = "";
         if ((bool) $oConfig->getConfigParam('rs-security_cookie_SameSite_enabled',

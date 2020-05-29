@@ -45,9 +45,13 @@ class Output extends Output_parent
                     for($x=1;$x<15;$x++)
                     {
                         $sValue = 'rs-security_'.$sHeader.'_'.str_pad($x,2,'0',STR_PAD_LEFT);
+                        $sValueDomains = 'rs-security_'.$sHeader.'_'.str_pad($x,2,'0',STR_PAD_LEFT)."_domains";
                         $sValue = trim($oConfig->getConfigParam($sValue));
+                        $aValueDomains = $oConfig->getConfigParam($sValueDomains);
                         if($sValue && $sValue!=="")
-                            $aValues[]=$sValue;
+                        {
+                            $aValues[]=$sValue." ".implode(" ",$aValueDomains);
+                        }
                     }
                     if(!empty($aValues))
                     {
